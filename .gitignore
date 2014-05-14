@@ -1,0 +1,9 @@
+
+# build output
+/lib/
+
+# libraries installed by NPM
+/node_modules/
+
+# auto-generated from this file
+/.npmignore

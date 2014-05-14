@@ -1,0 +1,37 @@
+{
+  "name":     "hubotbucket",
+  "version":  "0.0.1",
+
+  "author": "Sam Hanes <sam@maltera.com>",
+  "description": "Bitbucket API client plus Hubot scripts",
+  "keywords": [ "hubot", "bitbucket" ],
+  "license": "MIT",
+
+  "homepage": "https://github.com/Elemecca/hubotbucket",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Elemecca/hubotbucket.git"
+  },
+
+  "main": "src/hubotbucket.coffee",
+
+  "scripts": {
+    "prepublish": "coffee -o lib -c src && cat .gitignore | grep -v '^lib$' > .npmignore",
+    "test": "make test"
+  },
+
+  "engines": {
+    "node": ">=0.6.0"
+  },
+
+  "dependencies": {
+    "oauth":  "^0.9.11",
+    "async":  "^0.2.0"
+  },
+
+  "devDependencies": {
+    "mocha": "1.x",
+    "coffee-script": "1.1.3",
+    "nock": ">= 0.27.1"
+  }
+}
